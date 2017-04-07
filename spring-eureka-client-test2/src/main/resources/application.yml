@@ -1,0 +1,13 @@
+# 因为两个都部署在同一台机器上，所以可以直接发现服务，并注册，
+# 如果在不同的机器上不部署，application.yml配置中需要加上eureka的地址如，多个eureka服务地址，可以用，号隔开：
+
+server:
+  port: ${PORT:${SERVER_PORT:0}}  #随机指定个没使用的端口
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/  #http://${eureka-serviceIP}:8761/eureka/
+
+
+words: 你,我,他

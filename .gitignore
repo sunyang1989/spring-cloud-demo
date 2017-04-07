@@ -1,0 +1,12 @@
+.idea
+build
+target
+out
+logs
+**.iml
+**.info
+**.log
+**.classpath
+**.project
+**.settings
+.metadata/
