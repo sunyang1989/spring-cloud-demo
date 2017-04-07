@@ -23,8 +23,13 @@ Spring Cloud Netflix：
 
     Netflix Ribbon：客户端负载均衡。可以自定义负载均衡算法
         http://blog.csdn.net/w_x_z_/article/details/53242310
+        http://blog.csdn.net/u012453843/article/details/59719386
 
     Netflix Archaius：配置管理API，包含一系列配置管理API，提供动态类型化属性、线程安全配置操作、轮询框架、回调机制等功能
+
+    Netflix Feign：是一个声明式的REST客户端
+        https://segmentfault.com/u/mumubin
+        http://blog.csdn.net/neosmith/article/details/52449921
 
 Spring Cloud Consul：
     封装了Consul操作，consul是一个服务发现与配置工具，与Docker容器可以无缝集成。
