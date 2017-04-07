@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: zuul
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  host:
+    max-total-connections: 200 #总连接数
+    max-per-route-connections: 20 #每个路由连接数

@@ -17,7 +17,10 @@ import org.springframework.context.annotation.Configuration;
 public class RibbonConfiguration {
 
     /**
-     * RandomRule：随机策略 RoundRobinRule：轮询策略 BestAvailableRule：最少并发数策略 WeightedResponseTimeRule：根据响应时间分配一个weight(权重)，响应时间越长，weight越小，被选中的可能性越低
+     * RandomRule：随机策略
+     * RoundRobinRule：轮询策略
+     * BestAvailableRule：最少并发数策略
+     * WeightedResponseTimeRule：根据响应时间分配一个weight(权重)，响应时间越长，weight越小，被选中的可能性越低
      * ZoneAvoidanceRule：复合判断server所在区域的性能和server的可用性选择server AvailabilityFilteringRule：过滤掉那些因为一直连接失败的被标记为circuit
      * tripped的后端server，并过滤掉那些高并发的的后端server
      */
