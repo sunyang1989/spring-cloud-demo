@@ -20,5 +20,6 @@
         <module>spring-eureka-client-test2</module>
         <module>spring-cloud-feign</module>
         <module>spring-cloud-zuul</module>
+        <module>spring-boot-async</module>
     </modules>
 </project>

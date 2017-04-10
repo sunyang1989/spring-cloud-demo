@@ -52,4 +52,7 @@ Spring Cloud Sleuth：
 Spring Cloud Security：
     安全工具包，为应用程序添加安全控制，主要是指OAuth2。
 
+spring boot admin：
+    基于Spring Boot Actuator进行的封装
+
 
