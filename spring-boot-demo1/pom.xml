@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+<groupId>com.sy.test</groupId>
+<artifactId>spring-boot-demo1</artifactId>
+<version>1.0-SNAPSHOT</version>
+<name>spring boot project</name>
+
+<properties>
+    <jdk.version>1.8</jdk.version>
+    <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+</properties>
+
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.3.3.RELEASE</version>
+</parent>
+
+<build>
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <compilerVersion>${jdk.version}</compilerVersion>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </pluginManagement>
+    <plugins>
+        <plugin>
+            <!--
+            只有配置如下命令，热加载才生效
+            mvn clean package spring-boot:repackage
+            mvn clean spring-boot:run
+            直接Run运行的Application是不支持热加载的
+            修改完成之后 ctrl+f9 即可热部署
+            -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>1.3.3.RELEASE</version>
+            <dependencies>
+                <!--引入springloaded来实现动态加载-->
+                <dependency>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>springloaded</artifactId>
+                    <version>1.2.5.RELEASE</version>
+                </dependency>
+            </dependencies>
+            <configuration>
+                <!--  <mainClass>com.dhgate.rate.ApplicationSearch</mainClass> -->
+                <!--指定监听的端口号-->
+                <!--
+                <jvmArguments>
+                    -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=7777
+                </jvmArguments>
+                -->
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
+
+<dependencies>
+    <!--自动配置Spring MVC和tomcat-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+    </dependency>
+
+    <!--junit测试-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+
+    <!--安全访问控制-->
+    <!--<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>-->
+
+</dependencies>
+
+</project>
