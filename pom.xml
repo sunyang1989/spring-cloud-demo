@@ -22,5 +22,6 @@
         <module>spring-cloud-zuul</module>
         <module>spring-boot-async</module>
         <module>spring-boot-demo1</module>
+        <module>spring-boot-demo2</module>
     </modules>
 </project>
